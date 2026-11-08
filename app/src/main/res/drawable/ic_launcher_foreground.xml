@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- waveform bars on both sides of the cut marker, inside the 66dp adaptive-icon safe zone -->
+    <path
+        android:pathData="M29,46L29,62M39,38L39,70M49,31L49,77M69,36L69,72M79,44L79,64"
+        android:strokeColor="#4FD1C5"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M59,24L59,84"
+        android:strokeColor="#FFB74D"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round" />
+</vector>

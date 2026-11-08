@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_open_file">ファイルを開く</string>
+    <string name="start_record">録音</string>
+    <string name="back">戻る</string>
+    <string name="record_title">録音</string>
+    <string name="record_source">音源</string>
+    <string name="record_rate">サンプリングレート</string>
+    <string name="record_channels">チャンネル</string>
+    <string name="source_mic">マイク</string>
+    <string name="source_unprocessed">未処理</string>
+    <string name="source_voice_recognition">音声（認識）</string>
+    <string name="source_voice_communication">音声（通話）</string>
+    <string name="channels_mono">モノラル</string>
+    <string name="channels_stereo">ステレオ</string>
+    <string name="rate_khz" formatted="true">%s kHz</string>
+    <string name="record_start">録音開始</string>
+    <string name="record_pause">一時停止</string>
+    <string name="record_resume">再開</string>
+    <string name="record_stop">停止</string>
+    <string name="record_active_hint">他のアプリに切り替えても録音は続きます。</string>
+    <string name="err_mic_denied">録音にはマイクへのアクセスが必要です。システム設定で許可してください。</string>
+    <string name="err_rec_start">録音を開始できませんでした。マイクが他のアプリで使用中の可能性があります。</string>
+    <string name="err_rec_unsupported">このスマートフォンは選択した録音設定に対応していません。</string>
+    <string name="err_rec_read">録音が中断されました。</string>
+    <string name="err_rec_disk">録音を続けるための空き容量が足りません。</string>
+    <string name="err_rec_empty">何も録音されませんでした。</string>
+    <string name="open_progress">ファイルを開いています…</string>
+    <string name="err_open_no_audio">このファイルには音声がありません。</string>
+    <string name="err_open_unsupported">この音声形式はこのスマートフォンでは開けません。</string>
+    <string name="err_open_empty">ファイルに音声が含まれていません。</string>
+    <string name="err_open_io">ファイルを読み込めませんでした。</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_ok">OK</string>
+    <string name="label_start">開始</string>
+    <string name="label_end">終了</string>
+    <string name="label_length">長さ</string>
+    <string name="btn_play">再生</string>
+    <string name="btn_stop_play">停止</string>
+    <string name="zoom_in">拡大</string>
+    <string name="zoom_out">縮小</string>
+    <string name="zoom_selection">選択範囲に合わせる</string>
+    <string name="zoom_all">トラック全体</string>
+    <string name="normalize">ノーマライズ</string>
+    <string name="normalize_level">ピークレベル、dBFS</string>
+    <string name="btn_save">保存</string>
+    <string name="save_title">保存</string>
+    <string name="save_format">形式</string>
+    <string name="save_bitrate">ビットレート</string>
+    <string name="save_filename">ファイル名</string>
+    <string name="save_choose_folder">フォルダを選んで保存</string>
+    <string name="save_hint_folder">フォルダは次の手順で選びます。</string>
+    <string name="bitrate_kbps" formatted="true">%d kbps</string>
+    <string name="opus_resample_notice" formatted="true">Opus は %1$s kHz に対応していません。音声は %2$s kHz に変換されます。</string>
+    <string name="save_progress">保存中…</string>
+    <string name="save_done">保存しました。</string>
+    <string name="save_done_gain" formatted="true">音量を %s dB 変更しました。</string>
+    <string name="save_done_silent">選択範囲が無音のため、ノーマライズは適用されませんでした。</string>
+    <string name="save_done_resampled" formatted="true">%1$s から %2$s kHz に変換しました。</string>
+    <string name="btn_open">開く</string>
+    <string name="btn_share">共有</string>
+    <string name="btn_close">閉じる</string>
+    <string name="err_save_empty">先に空でない範囲を選択してください。</string>
+    <string name="err_save_wav_large">選択範囲が WAV には長すぎます（上限 4 GB）。別の形式を選んでください。</string>
+    <string name="err_save_encoder">このスマートフォンは選択した形式をエンコードできません。</string>
+    <string name="err_save_failed">保存できませんでした。空き容量を確認してもう一度お試しください。</string>
+    <string name="exit_title">保存せずに終了しますか？</string>
+    <string name="exit_message">録音または変更内容は失われます。</string>
+    <string name="exit_discard">終了</string>
+    <string name="exit_stay">とどまる</string>
+    <string name="notif_channel">録音</string>
+    <string name="notif_recording">録音中…</string>
+    <string name="notif_stop">停止</string>
+    <string name="err_no_app">このファイルを開けるアプリがありません。</string>
+    <string name="recording_name">録音</string>
+</resources>

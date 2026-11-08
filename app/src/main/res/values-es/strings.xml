@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_open_file">Abrir archivo</string>
+    <string name="start_record">Grabar</string>
+    <string name="back">Atrás</string>
+    <string name="record_title">Grabar</string>
+    <string name="record_source">Fuente de audio</string>
+    <string name="record_rate">Frecuencia de muestreo</string>
+    <string name="record_channels">Canales</string>
+    <string name="source_mic">Micrófono</string>
+    <string name="source_unprocessed">Sin procesar</string>
+    <string name="source_voice_recognition">Voz (reconocimiento)</string>
+    <string name="source_voice_communication">Voz (llamada)</string>
+    <string name="channels_mono">Mono</string>
+    <string name="channels_stereo">Estéreo</string>
+    <string name="rate_khz" formatted="true">%s kHz</string>
+    <string name="record_start">Grabar</string>
+    <string name="record_pause">Pausa</string>
+    <string name="record_resume">Reanudar</string>
+    <string name="record_stop">Detener</string>
+    <string name="record_active_hint">La grabación continúa si cambias a otra aplicación.</string>
+    <string name="err_mic_denied">Para grabar se necesita acceso al micrófono. Permítelo en los ajustes del sistema.</string>
+    <string name="err_rec_start">No se pudo iniciar la grabación. Puede que otra aplicación esté usando el micrófono.</string>
+    <string name="err_rec_unsupported">Este teléfono no admite los ajustes de grabación elegidos.</string>
+    <string name="err_rec_read">La grabación se interrumpió.</string>
+    <string name="err_rec_disk">No hay espacio libre suficiente para seguir grabando.</string>
+    <string name="err_rec_empty">No se grabó nada.</string>
+    <string name="open_progress">Abriendo el archivo…</string>
+    <string name="err_open_no_audio">El archivo no tiene audio.</string>
+    <string name="err_open_unsupported">Este formato de audio no se puede abrir en este teléfono.</string>
+    <string name="err_open_empty">El archivo no contiene sonido.</string>
+    <string name="err_open_io">No se pudo leer el archivo.</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_ok">Aceptar</string>
+    <string name="label_start">Inicio</string>
+    <string name="label_end">Fin</string>
+    <string name="label_length">Duración</string>
+    <string name="btn_play">Reproducir</string>
+    <string name="btn_stop_play">Detener</string>
+    <string name="zoom_in">Acercar</string>
+    <string name="zoom_out">Alejar</string>
+    <string name="zoom_selection">Ajustar a la selección</string>
+    <string name="zoom_all">Pista completa</string>
+    <string name="normalize">Normalizar</string>
+    <string name="normalize_level">Nivel de pico, dBFS</string>
+    <string name="btn_save">Guardar</string>
+    <string name="save_title">Guardar</string>
+    <string name="save_format">Formato</string>
+    <string name="save_bitrate">Tasa de bits</string>
+    <string name="save_filename">Nombre del archivo</string>
+    <string name="save_choose_folder">Elegir carpeta y guardar</string>
+    <string name="save_hint_folder">La carpeta se elige en el siguiente paso.</string>
+    <string name="bitrate_kbps" formatted="true">%d kbps</string>
+    <string name="opus_resample_notice" formatted="true">Opus no admite %1$s kHz. El sonido se convertirá a %2$s kHz.</string>
+    <string name="save_progress">Guardando…</string>
+    <string name="save_done">Guardado.</string>
+    <string name="save_done_gain" formatted="true">Volumen cambiado en %s dB.</string>
+    <string name="save_done_silent">La selección está en silencio, por lo que no se aplicó la normalización.</string>
+    <string name="save_done_resampled" formatted="true">Convertido de %1$s a %2$s kHz.</string>
+    <string name="btn_open">Abrir</string>
+    <string name="btn_share">Compartir</string>
+    <string name="btn_close">Cerrar</string>
+    <string name="err_save_empty">Primero selecciona un intervalo que no esté vacío.</string>
+    <string name="err_save_wav_large">La selección es demasiado larga para WAV (límite de 4 GB). Elige otro formato.</string>
+    <string name="err_save_encoder">Este teléfono no puede codificar el formato elegido.</string>
+    <string name="err_save_failed">No se pudo guardar. Comprueba el espacio libre e inténtalo de nuevo.</string>
+    <string name="exit_title">¿Salir sin guardar?</string>
+    <string name="exit_message">Se perderá la grabación o tus cambios.</string>
+    <string name="exit_discard">Salir</string>
+    <string name="exit_stay">Quedarme</string>
+    <string name="notif_channel">Grabación</string>
+    <string name="notif_recording">Grabando audio…</string>
+    <string name="notif_stop">Detener</string>
+    <string name="err_no_app">Ninguna aplicación puede abrir este archivo.</string>
+    <string name="recording_name">Grabación</string>
+</resources>

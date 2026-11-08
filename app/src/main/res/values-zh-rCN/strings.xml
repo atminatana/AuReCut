@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_open_file">打开文件</string>
+    <string name="start_record">录音</string>
+    <string name="back">返回</string>
+    <string name="record_title">录音</string>
+    <string name="record_source">音源</string>
+    <string name="record_rate">采样率</string>
+    <string name="record_channels">声道</string>
+    <string name="source_mic">麦克风</string>
+    <string name="source_unprocessed">未处理</string>
+    <string name="source_voice_recognition">语音（识别）</string>
+    <string name="source_voice_communication">语音（通话）</string>
+    <string name="channels_mono">单声道</string>
+    <string name="channels_stereo">立体声</string>
+    <string name="rate_khz" formatted="true">%s kHz</string>
+    <string name="record_start">开始录音</string>
+    <string name="record_pause">暂停</string>
+    <string name="record_resume">继续</string>
+    <string name="record_stop">停止</string>
+    <string name="record_active_hint">切换到其他应用时，录音会继续进行。</string>
+    <string name="err_mic_denied">录音需要使用麦克风。请在系统设置中允许。</string>
+    <string name="err_rec_start">无法开始录音，麦克风可能正被其他应用占用。</string>
+    <string name="err_rec_unsupported">此手机不支持所选的录音设置。</string>
+    <string name="err_rec_read">录音已中断。</string>
+    <string name="err_rec_disk">可用存储空间不足，无法继续录音。</string>
+    <string name="err_rec_empty">没有录到任何内容。</string>
+    <string name="open_progress">正在打开文件…</string>
+    <string name="err_open_no_audio">此文件不包含音频。</string>
+    <string name="err_open_unsupported">此手机无法打开该音频格式。</string>
+    <string name="err_open_empty">文件中没有声音。</string>
+    <string name="err_open_io">无法读取文件。</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_ok">确定</string>
+    <string name="label_start">起点</string>
+    <string name="label_end">终点</string>
+    <string name="label_length">时长</string>
+    <string name="btn_play">播放</string>
+    <string name="btn_stop_play">停止</string>
+    <string name="zoom_in">放大</string>
+    <string name="zoom_out">缩小</string>
+    <string name="zoom_selection">适应选区</string>
+    <string name="zoom_all">整条音轨</string>
+    <string name="normalize">标准化</string>
+    <string name="normalize_level">峰值电平，dBFS</string>
+    <string name="btn_save">保存</string>
+    <string name="save_title">保存</string>
+    <string name="save_format">格式</string>
+    <string name="save_bitrate">比特率</string>
+    <string name="save_filename">文件名</string>
+    <string name="save_choose_folder">选择文件夹并保存</string>
+    <string name="save_hint_folder">下一步选择文件夹。</string>
+    <string name="bitrate_kbps" formatted="true">%d kbps</string>
+    <string name="opus_resample_notice" formatted="true">Opus 不支持 %1$s kHz，声音将转换为 %2$s kHz。</string>
+    <string name="save_progress">正在保存…</string>
+    <string name="save_done">已保存。</string>
+    <string name="save_done_gain" formatted="true">音量已调整 %s dB。</string>
+    <string name="save_done_silent">选区为静音，未应用标准化。</string>
+    <string name="save_done_resampled" formatted="true">已从 %1$s 转换为 %2$s kHz。</string>
+    <string name="btn_open">打开</string>
+    <string name="btn_share">分享</string>
+    <string name="btn_close">关闭</string>
+    <string name="err_save_empty">请先选择非空的范围。</string>
+    <string name="err_save_wav_large">所选内容对 WAV 来说过长（上限 4 GB），请选择其他格式。</string>
+    <string name="err_save_encoder">此手机无法编码所选格式。</string>
+    <string name="err_save_failed">保存失败。请检查可用空间后重试。</string>
+    <string name="exit_title">不保存就退出？</string>
+    <string name="exit_message">录音或您的修改将会丢失。</string>
+    <string name="exit_discard">退出</string>
+    <string name="exit_stay">留下</string>
+    <string name="notif_channel">录音</string>
+    <string name="notif_recording">正在录音…</string>
+    <string name="notif_stop">停止</string>
+    <string name="err_no_app">没有应用可以打开此文件。</string>
+    <string name="recording_name">录音</string>
+</resources>

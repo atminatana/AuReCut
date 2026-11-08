@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">AuReCut</string>
+    <string name="start_open_file">Open file</string>
+    <string name="start_record">Record</string>
+    <string name="back">Back</string>
+    <string name="record_title">Record</string>
+    <string name="record_source">Audio source</string>
+    <string name="record_rate">Sample rate</string>
+    <string name="record_channels">Channels</string>
+    <string name="source_mic">Microphone</string>
+    <string name="source_unprocessed">Unprocessed (raw)</string>
+    <string name="source_voice_recognition">Voice (recognition)</string>
+    <string name="source_voice_communication">Voice (call)</string>
+    <string name="channels_mono">Mono</string>
+    <string name="channels_stereo">Stereo</string>
+    <string name="rate_khz" formatted="true">%s kHz</string>
+    <string name="record_start">Record</string>
+    <string name="record_pause">Pause</string>
+    <string name="record_resume">Resume</string>
+    <string name="record_stop">Stop</string>
+    <string name="record_active_hint">Recording continues if you switch to another app.</string>
+    <string name="err_mic_denied">Recording needs access to the microphone. Allow it in the system settings.</string>
+    <string name="err_rec_start">Could not start recording. The microphone may be in use by another app.</string>
+    <string name="err_rec_unsupported">This phone does not support the selected recording settings.</string>
+    <string name="err_rec_read">Recording was interrupted.</string>
+    <string name="err_rec_disk">Not enough free space to keep recording.</string>
+    <string name="err_rec_empty">Nothing was recorded.</string>
+    <string name="open_progress">Opening the file…</string>
+    <string name="err_open_no_audio">This file has no audio.</string>
+    <string name="err_open_unsupported">This audio format cannot be opened on this phone.</string>
+    <string name="err_open_empty">The file contains no sound.</string>
+    <string name="err_open_io">Could not read the file.</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="label_start">Start</string>
+    <string name="label_end">End</string>
+    <string name="label_length">Length</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_stop_play">Stop</string>
+    <string name="zoom_in">Zoom in</string>
+    <string name="zoom_out">Zoom out</string>
+    <string name="zoom_selection">Fit selection</string>
+    <string name="zoom_all">Whole track</string>
+    <string name="normalize">Normalize</string>
+    <string name="normalize_level">Peak level, dBFS</string>
+    <string name="btn_save">Save</string>
+    <string name="save_title">Save</string>
+    <string name="save_format">Format</string>
+    <string name="save_bitrate">Bitrate</string>
+    <string name="save_filename">File name</string>
+    <string name="save_choose_folder">Choose folder and save</string>
+    <string name="save_hint_folder">The folder is chosen in the next step.</string>
+    <string name="bitrate_kbps" formatted="true">%d kbps</string>
+    <string name="opus_resample_notice" formatted="true">Opus does not support %1$s kHz. The sound will be converted to %2$s kHz.</string>
+    <string name="save_progress">Saving…</string>
+    <string name="save_done">Saved.</string>
+    <string name="save_done_gain" formatted="true">Volume changed by %s dB.</string>
+    <string name="save_done_silent">The selection is silent, so normalization was not applied.</string>
+    <string name="save_done_resampled" formatted="true">Converted from %1$s to %2$s kHz.</string>
+    <string name="btn_open">Open</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_close">Close</string>
+    <string name="err_save_empty">Select a non-empty range first.</string>
+    <string name="err_save_wav_large">The selection is too long for a WAV file (4 GB limit). Choose another format.</string>
+    <string name="err_save_encoder">This phone cannot encode the selected format.</string>
+    <string name="err_save_failed">Saving failed. Check the free space and try again.</string>
+    <string name="exit_title">Leave without saving?</string>
+    <string name="exit_message">The recording or your changes will be lost.</string>
+    <string name="exit_discard">Leave</string>
+    <string name="exit_stay">Stay</string>
+    <string name="notif_channel">Recording</string>
+    <string name="notif_recording">Recording audio…</string>
+    <string name="notif_stop">Stop</string>
+    <string name="err_no_app">No app can open this file.</string>
+    <string name="recording_name">Recording</string>
+</resources>

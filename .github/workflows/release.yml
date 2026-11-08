@@ -1,0 +1,99 @@
+name: Release
+
+# Push a tag like v1.2.3 (or v1.2.3-rc1 for a pre-release) and this workflow builds a signed APK
+# and publishes it as a GitHub Release with generated notes.
+#
+# Required repository secrets (Settings -> Secrets and variables -> Actions):
+#   KEYSTORE_BASE64    the release keystore, encoded with:  base64 -w0 release.jks
+#   KEYSTORE_PASSWORD  keystore password
+#   KEY_ALIAS          key alias inside the keystore
+#   KEY_PASSWORD       key password
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v4
+
+      - name: Version from the tag
+        id: version
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          name="${tag#v}"
+          if [[ ! "$name" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)(-[0-9A-Za-z.]+)?$ ]]; then
+            echo "::error::Tag '$tag' is not of the form vMAJOR.MINOR.PATCH or vMAJOR.MINOR.PATCH-suffix"
+            exit 1
+          fi
+          major="${BASH_REMATCH[1]}"; minor="${BASH_REMATCH[2]}"; patch="${BASH_REMATCH[3]}"
+          if (( minor > 99 || patch > 99 )); then
+            echo "::error::Minor and patch must be 0..99 to fit the version code"
+            exit 1
+          fi
+          code=$(( major * 10000 + minor * 100 + patch ))
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [[ -n "${BASH_REMATCH[4]}" ]]; then echo "prerelease=true" >> "$GITHUB_OUTPUT"; else echo "prerelease=false" >> "$GITHUB_OUTPUT"; fi
+          echo "Building $name (versionCode $code)"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Restore the signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          for v in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            if [[ -z "${!v}" ]]; then
+              echo "::error::Repository secret $v is not set. See the comment at the top of release.yml."
+              exit 1
+            fi
+          done
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/release.jks"
+          echo "KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+
+      - name: Test and build the signed APK
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: >
+          ./gradlew --no-daemon testDebugUnitTest assembleRelease
+          -PappVersionName=${{ steps.version.outputs.name }}
+          -PappVersionCode=${{ steps.version.outputs.code }}
+
+      - name: Verify the signature and name the file
+        id: apk
+        run: |
+          apk=$(find app/build/outputs/apk/release -name '*.apk' | head -n 1)
+          if [[ -z "$apk" ]]; then echo "::error::No release APK was produced"; exit 1; fi
+          apksigner="$(ls -d "$ANDROID_HOME"/build-tools/*/ | sort -V | tail -n 1)apksigner"
+          "$apksigner" verify --print-certs "$apk"
+          out="AuReCut-${{ steps.version.outputs.name }}.apk"
+          cp "$apk" "$out"
+          sha256sum "$out" > "$out.sha256"
+          echo "file=$out" >> "$GITHUB_OUTPUT"
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          flags=(--generate-notes --verify-tag --title "AuReCut ${{ steps.version.outputs.name }}")
+          if [[ "${{ steps.version.outputs.prerelease }}" == "true" ]]; then flags+=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" "${{ steps.apk.outputs.file }}" "${{ steps.apk.outputs.file }}.sha256" "${flags[@]}"

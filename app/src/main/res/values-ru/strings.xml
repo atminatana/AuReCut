@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_open_file">Открыть файл</string>
+    <string name="start_record">Запись</string>
+    <string name="back">Назад</string>
+    <string name="record_title">Запись</string>
+    <string name="record_source">Источник звука</string>
+    <string name="record_rate">Частота дискретизации</string>
+    <string name="record_channels">Каналы</string>
+    <string name="source_mic">Микрофон</string>
+    <string name="source_unprocessed">Без обработки</string>
+    <string name="source_voice_recognition">Голос (распознавание)</string>
+    <string name="source_voice_communication">Голос (связь)</string>
+    <string name="channels_mono">Моно</string>
+    <string name="channels_stereo">Стерео</string>
+    <string name="rate_khz" formatted="true">%s кГц</string>
+    <string name="record_start">Запись</string>
+    <string name="record_pause">Пауза</string>
+    <string name="record_resume">Продолжить</string>
+    <string name="record_stop">Стоп</string>
+    <string name="record_active_hint">Запись продолжится, если вы перейдёте в другое приложение.</string>
+    <string name="err_mic_denied">Для записи нужен доступ к микрофону. Разрешите его в настройках системы.</string>
+    <string name="err_rec_start">Не удалось начать запись. Возможно, микрофон занят другим приложением.</string>
+    <string name="err_rec_unsupported">Телефон не поддерживает выбранные параметры записи.</string>
+    <string name="err_rec_read">Запись прервана.</string>
+    <string name="err_rec_disk">Не хватает свободного места, чтобы продолжить запись.</string>
+    <string name="err_rec_empty">Ничего не записано.</string>
+    <string name="open_progress">Открываю файл…</string>
+    <string name="err_open_no_audio">В файле нет звука.</string>
+    <string name="err_open_unsupported">Этот формат нельзя открыть на этом телефоне.</string>
+    <string name="err_open_empty">В файле нет звуковых данных.</string>
+    <string name="err_open_io">Не удалось прочитать файл.</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_ok">OK</string>
+    <string name="label_start">Начало</string>
+    <string name="label_end">Конец</string>
+    <string name="label_length">Длительность</string>
+    <string name="btn_play">Играть</string>
+    <string name="btn_stop_play">Стоп</string>
+    <string name="zoom_in">Приблизить</string>
+    <string name="zoom_out">Отдалить</string>
+    <string name="zoom_selection">По выделению</string>
+    <string name="zoom_all">Весь трек</string>
+    <string name="normalize">Нормализация</string>
+    <string name="normalize_level">Уровень пика, dBFS</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="save_title">Сохранение</string>
+    <string name="save_format">Формат</string>
+    <string name="save_bitrate">Битрейт</string>
+    <string name="save_filename">Имя файла</string>
+    <string name="save_choose_folder">Выбрать папку и сохранить</string>
+    <string name="save_hint_folder">Папка выбирается на следующем шаге.</string>
+    <string name="bitrate_kbps" formatted="true">%d кбит/с</string>
+    <string name="opus_resample_notice" formatted="true">Opus не поддерживает %1$s кГц. Звук будет пересчитан в %2$s кГц.</string>
+    <string name="save_progress">Сохранение…</string>
+    <string name="save_done">Сохранено.</string>
+    <string name="save_done_gain" formatted="true">Громкость изменена на %s дБ.</string>
+    <string name="save_done_silent">Выделенный фрагмент тихий, нормализация не применена.</string>
+    <string name="save_done_resampled" formatted="true">Пересчитано из %1$s в %2$s кГц.</string>
+    <string name="btn_open">Открыть</string>
+    <string name="btn_share">Поделиться</string>
+    <string name="btn_close">Закрыть</string>
+    <string name="err_save_empty">Сначала выберите непустой диапазон.</string>
+    <string name="err_save_wav_large">Фрагмент слишком длинный для WAV (предел 4 ГБ). Выберите другой формат.</string>
+    <string name="err_save_encoder">Телефон не может закодировать выбранный формат.</string>
+    <string name="err_save_failed">Не удалось сохранить. Проверьте свободное место и повторите.</string>
+    <string name="exit_title">Выйти без сохранения?</string>
+    <string name="exit_message">Запись или ваши изменения будут потеряны.</string>
+    <string name="exit_discard">Выйти</string>
+    <string name="exit_stay">Остаться</string>
+    <string name="notif_channel">Запись</string>
+    <string name="notif_recording">Идёт запись звука…</string>
+    <string name="notif_stop">Стоп</string>
+    <string name="err_no_app">Нет приложения, которое может открыть этот файл.</string>
+    <string name="recording_name">Запись</string>
+</resources>
